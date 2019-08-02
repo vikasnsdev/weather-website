@@ -8,7 +8,7 @@ forecast = (lattitude, longitude, callback) => {
         } else if (body.error){
             callback('unable to find', undefined);
         }else {
-            callback(undefined, `Partly ${body.currently.icon} starting in the evening. It is currently ${body.currently.temperature} degrees out. There is ${body.currently.precipProbability}% chance of rain.` );
+            callback(undefined, `${body.daily.data[0].summary} It is currently ${body.currently.temperature} degrees out. There is ${body.currently.precipProbability}% chance of rain.` );
         }
     })
 }
